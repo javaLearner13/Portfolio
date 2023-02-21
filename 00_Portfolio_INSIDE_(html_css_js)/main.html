@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jongmin Kim HTML Portfolio main page">
+    <meta name="keywords" content="Steam, Game, Inside, Horror, Ambient">
+    <meta name="author" content="Jongmin Kim">
+    <link rel="stylesheet" href="css/main.css">
+    <title>I N S I D E</title>
+    <link rel="icon" href="images/favicon/favicon.ico">
+</head>
+<body>
+    <!--cool gif-->
+    <!--<div class="bg"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/304430/extras/gif5.png?t=1655801492" alt=""></div>-->
+    <div id="wrap">
+        <!--wrap everything-->
+
+        <div class="video_wrap">
+            <video autoplay muted class="greetVideo" id="greetVideo">
+                <!--main video-->
+                <source src="videos/INSIDE_greetVideo.mp4">
+            </video>
+            <div class="emerge4" id="btn"> <!-- button top right --> <!-- #btn for JS -->
+                <a href="main2.html" class="btn"><img src="images/btn_common_3.png" alt="btn_click"></a>
+            </div>
+            <video muted id="greetVideo_2"> <!-- hover video -->
+                <source src="videos/greet_video_2.mp4">
+            </video> 
+        </div><!-- video_wrap -->
+
+        <div class="emerge3"> <!-- button at the end -->
+            <a href="main2.html" class="btn"><img src="images/btn_common_3.png" alt="btn_click"></a>
+            <!--                <a href="#" class="btn2">SEQUEL</a>-->
+        </div><!-- emerge3 -->
+
+        <div class="text_wrap" id="text_wrap">
+            <h1 class="slide_left">INSIDE</h1>
+            <p class="emerge">Hunted and alone, a boy finds himself drawn into the center of a dark project.</p>
+            <p class="emerge2">Indulge in a dark, narrative-driven platformer combining intense action with challenging
+                puzzles.</p>
+        </div><!-- text_wrap -->
+        
+    </div><!-- wrap -->
+
+    <script>
+        var greetVideo = document.getElementById("greetVideo");
+        var text_wrap = document.getElementById("text_wrap");
+        var btn = document.getElementById("btn");
+        var greetVideo2 = document.getElementById("greetVideo_2");
+        //        btn.style.display = "none";
+        btn.addEventListener('mouseover', function () {
+            greetVideo.style.zIndex = -2;
+            text_wrap.style.zIndex = -2;
+            greetVideo2.style.zIndex = 1;
+            btn.style.zIndex = 3;
+            greetVideo2.play();
+            //            greetVideo.pause();
+
+        })
+        btn.addEventListener('mouseout', function () {
+            greetVideo.style.zIndex = 0;
+            text_wrap.style.zIndex = 0;
+            greetVideo2.style.zIndex = -2;
+            btn.style.zIndex = 3;
+            greetVideo2.pause();
+            //            greetVideo.play();
+
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* for scrolls */
+body,
+html {
+    /* overflow: hidden; */
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+#wrap {
+    /* width: 100vw;
+    height: 100vh;
+    background-color: black; */
+    width: 600%;
+    height: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+/* x-axis boxes */
+.box {
+    /* position: absolute; */
+    /* width: 100vw;
+    height: 100vw; */
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    background-color: black;
+}
+
+.box div {
+    text-align: center;
+    line-height: 100vh;
+    /* display: inline-block; */
+}
+
+#forNav {
+    top: 2vw;
+    left: 1vw;
+    position: fixed;
+    width: 13.5vw;
+    height: 4vw;
+    /* background-color: red; */
+    z-index: 999;
+    cursor: pointer;
+    text-align: center;
+    line-height: 4vw;
+}
+
+#forNav span {
+    /* display: block; */
+    float: left;
+    width: 10vw;
+    height: 2.5vw;
+    /* top: 1vw; */
+    /* left: 2vw; */
+    color: grey;
+    font-size: 6vw;
+    font-weight: bold;
+}
+
+#forNav span:hover{
+    color: rgb(136,0,0);
+}
+
+.box h1{
+    /* position: absolute; */
+    /* background-color: red; */
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    
+}
+
+div input{
+    color: black;
+    border: none;
+    height: 4vh;
+    border-radius: 0.5vw;
+}
+
+div input:focus{
+    background-color: rgb(136, 0, 0);
+    scale: 1.05;
+}
+
+#boink{
+    color: rgb(136, 0, 0);
+}
+
+.box6 div h1 span{
+    color: rgb(136, 0, 0);
+}
